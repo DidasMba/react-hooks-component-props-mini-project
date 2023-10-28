@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import blogData from "../data/blog";
 
 console.log(blogData);
@@ -12,4 +12,27 @@ function App() {
   );
 }
 
+export default App;*/
+
+
+// App.js
+import React from 'react';
+import Header from './Header';
+import About from './About';
+import ArticleList from './ArticleList';
+import blogData from '../data/blog';
+
+function App() {
+  const { blogName, blogImage, aboutText, articles } = blogData;
+
+  return (
+    <div>
+      <Header blogName={blogName} />
+      <About blogImage={blogImage} aboutText={aboutText} />
+      <ArticleList articles={articles} />
+    </div>
+  );
+}
+
 export default App;
+
